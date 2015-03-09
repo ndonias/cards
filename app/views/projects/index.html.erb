@@ -1,0 +1,6 @@
+<% @projects.each do |project| %>
+	<h3><%= link_to project.title, project%>
+		<%= link_to 'X', project_path(project), method: :delete, remote: true, data: {deleteable: :project} %>
+	</h3>
+	<br/>
+<% end %>
